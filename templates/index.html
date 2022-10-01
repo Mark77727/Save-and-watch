@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="icon" href="favicon (3).ico" type="image/x-icon">
+
+
+       <!--<link href="{% static 'css/vendor.css' %}"  link rel="stylesheet">-->
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function(m, e, t, r, i, k, a) {
+            m[i] = m[i] || function() {
+                (m[i].a = m[i].a || []).push(arguments)
+            };
+            m[i].l = 1 * new Date();
+            k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+        })
+        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+        ym(85992038, "init", {
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true
+        });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/85992038" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" >
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+
+    <meta name="description" content="Онлайн мониторинг движения закупок (перечней согласования) Курган. Тут вы можете отследить движение закупки, 
+    а также скачать подписанное согласование." />
+    <meta name="robots" content="index, follow">
+
+
+    <!--метатеги, которые чистят клиентский кэш-->
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="-1" />
+
+    <title>Закупки ДЗО мониторинг</title>
+
+</head>
+
+<body>
+    <div id="toTop"><i class="fa fa-angle-double-up" aria-hidden="true"></i></div>
+    <header class="menu-bar">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <button class="bar"><i class="fa fa-bars" aria-hidden="true"></i></button>
+                    <nav>
+                        <ul class="menu d-flex justify-content-center">
+                            <!--<li class="menu__item"><a href="index.html">SW<i class="fa fa-plus-square" aria-hidden="true"></i></a></li>-->
+                            <li class="menu__item"><a href="#">Изменения </a></li>
+                            <li class="menu__item"><a href="registry2022.zip">Реестр</a></li>
+                            <li class="menu__item"><a href="#Архив">Архив</a></li>
+                            <li class="menu__item"><a href="#Образцы">Образцы</a></li>
+                            <li class="menu__item"><a href="#Документы">Документы</a></li>
+                            <li class="menu__item"><a href="#Поддержка">Поддержка</a></li>
+                            <!--<li class="menu__item"><a href="#">Разное</a></li>-->
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container" id="Изменения">
+        <div class="row">
+            <div class="col-xl-12">
+                <h1> <i class="fa fa-info-circle" aria-hidden="true"></i> Актуальное</h1>
+                <div class="list-group">
+                    <div class="list-group-item list-group-item-action flex-column align-items-start">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">Время обновлений</h5>
+                            <small class="text-muted">10.01.2022</small>
+                        </div>
+                        <p class="mb-1">Обновления разделов "Реестр" и "Архив" происходит в 06:30-07:30 PM</p>
+                    </div>
+                    <div class="list-group-item list-group-item-action flex-column align-items-start">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">Изменения</h5>
+                            <small class="text-muted">02.03.2022</small>
+                        </div>
+                        <p class="mb-1">Финансовое управление выпустило приложение к перечням на закупки "Капитальный ремонт" (см. раздел "Образцы")</p>
+                    </div>
+                    <div class="list-group-item list-group-item-action flex-column align-items-start">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">Изменения</h5>
+                            <small class="text-muted">02.03.2022</small>
+                        </div>
+                        <p class="mb-1">В связи со сменой названия финансового управления, следует писать "Врио директора Департамента финансов Курганской области С.А. Гаврин" (см. раздел "Образцы" -> "Утвержденный пример перечня согласования")</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </header>
+    <div class="container" id="Архив">
+        <div class="row">
+            <div class="col-xl-12">
+                <h1> <i class="fa fa-archive" aria-hidden="true"></i> Архив</h1>
+                <div class="one-row d-flex justify-content-center">
+                    <a href="month_html/january.html" class="dws-1" role="button">Январь</a>
+                    <a href="month_html/february.html" class="dws-1" role="button">Февраль</a>
+                    <a href="month_html/march.html" class="dws-1" role="button">Март</a>
+                </div>
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="one-row d-flex justify-content-center">
+                            <a href="month_html/april.html" class="dws-1" role="button">Апрель</a>
+                            <a href="month_html/may.html" class="dws-1" role="button">Май</a>
+                            <a href="month_html/june.html" class="dws-1" role="button">Июнь</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="two-row d-flex justify-content-center">
+                            <a href="month_html/july.html" class="dws-1" role="button">Июль</a>
+                            <a href="month_html/august.html" class="dws-1" role="button">Август</a>
+                            <a href="month_html/september.html" class="dws-1" role="button">Сентябрь</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="two-row d-flex justify-content-center">
+                            <a href="month_html/october.html" class="dws-1" role="button">Октябрь</a>
+                            <a href="month_html/november.html" class="dws-1" role="button">Ноябрь</a>
+                            <a href="month_html/december.html" class="dws-1" role="button">Декабрь</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="two-row d-flex justify-content-center">
+                            <a href="registry2021.zip" class="dws-1" role="button">Реестр 2021</a>
+                            <a href="registry2022.zip" class="dws-1" role="button">Реестр 2022</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container1" id="Образцы">
+            <div class="row">
+                <div class="col-xl-12">
+                    <h1><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Образцы</h1>
+
+                    <p><i class="fa fa-square-o" aria-hidden="true"></i> Рекомендации к написанию пояснительных записок</p>
+
+                    <div class="btn-group" role="group" aria-label="Basic outlined example">
+                        <!--<a class="btn btn-outline-primary" href="explanation/Обоснование потребности.pdf" role="button">Шаблон</a>-->
+                        <a class="btn btn-outline-primary-cover" href="explanation/Рекомендации к написанию пояснительных записок.docx" role="button">Смотреть</a>
+                    </div>
+
+                    <p><i class="fa fa-square-o" aria-hidden="true"></i> Рекомендации к написанию пояснительной записки "Техническое обслуживание и ремонт медицинской техники"</p>
+
+                    <div class="btn-group" role="group" aria-label="Basic outlined example">
+                        <!--<a class="btn btn-outline-primary" href="explanation/Обоснование потребности.pdf" role="button">Шаблон</a>-->
+                        <a class="btn btn-outline-primary-cover" href="explanation/Техническое обслуживание и ремонт медицинской техники.jpg" role="button">Образец</a>
+                    </div>
+
+                    <p><i class="fa fa-square-o" aria-hidden="true"></i> Рекомендации к написанию пояснительной записки "Обоснование потребности"</p>
+
+                    <div class="btn-group" role="group" aria-label="Basic outlined example">
+                        <!--<a class="btn btn-outline-primary" href="explanation/Обоснование потребности.pdf" role="button">Шаблон</a>-->
+                        <a class="btn btn-outline-primary-cover" href="explanation/Обоснование потребности.pdf" role="button">Образец</a>
+                    </div>
+
+
+                    <p><i class="fa fa-square-o" aria-hidden="true"></i> Рекомендации к написанию пояснительной записки "Автомобильные шины/диски"</p>
+
+                    <div class="btn-group" role="group" aria-label="Basic outlined example">
+                        <!--<a class="btn btn-outline-primary" href="explanation/Обоснование потребности.pdf" role="button">Шаблон</a>-->
+                        <a class="btn btn-outline-primary-cover" href="explanation/Автомобильные шины.pdf" role="button">Образец</a>
+                    </div>
+
+                    <p><i class="fa fa-square-o" aria-hidden="true"></i> Рекомендации к написанию пояснительной записки "Обоснование количества закупаемого объекта"</p>
+
+                    <div class="btn-group" role="group" aria-label="Basic outlined example">
+                        <!--<a class="btn btn-outline-primary" href="explanation/Обоснование потребности.pdf" role="button">Шаблон</a>-->
+                        <a class="btn btn-outline-primary-cover" href="explanation/Обоснование колличества закупаемого объекта.pdf" role="button">Образец</a>
+                    </div>
+
+                    <p><i class="fa fa-square-o" aria-hidden="true"></i> Утвержденный пример перечня согласования</p>
+
+                    <div class="btn-group" role="group" aria-label="Basic outlined example">
+                        <!--<a class="btn btn-outline-primary" href="explanation/Обоснование потребности.pdf" role="button">Шаблон</a>-->
+                        <a class="btn btn-outline-primary-cover" href="explanation/Пример согласования 2021.xls" role="button">Образец</a>
+                    </div>
+
+                    <p><i class="fa fa-square-o" aria-hidden="true"></i> Справка по ремонтам (стройкам)</p>
+
+                    <div class="btn-group" role="group" aria-label="Basic outlined example">
+                        <!--<a class="btn btn-outline-primary" href="explanation/Обоснование потребности.pdf" role="button">Шаблон</a>-->
+                        <a class="btn btn-outline-primary-cover" href="explanation/Для ГРБС согласование  по ремонтам (стройкам).docx" role="button">Образец</a>
+                    </div>
+
+                    <!--<p>5. Требования к составлению перечня на согласование</p>
+                <div class="btn-group" role="group" aria-label="Basic outlined example">
+                    <button type="button" class="btn btn-outline-primary">Шаблон</button>
+                    <button type="button" class="btn btn-outline-primary-cover">Образец</button>
+                </div>-->
+                </div>
+            </div>
+        </div>
+        <div class="container2" id="Документы">
+            <div class="row">
+                <div class="col-xl-12">
+                    <h1><i class="fa fa-folder-open-o" aria-hidden="true"></i> Документы</h1>
+                    <p><i class="fa fa-square-o" aria-hidden="true"></i> Распоряжение Губернатора Курганской области от 12 апреля 2019 года №44-П-р "Об организации согласования закупок товаров, работ, услуг для обоснования государственных нужд Курганской
+                        области"
+                    </p>
+                    <div class="btn-group" role="group" aria-label="Basic outlined example">
+
+                        <!--<a class="btn btn-outline-primary" href="explanation/Обоснование потребности.pdf" role="button">Шаблон</a>-->
+                        <a class="btn btn-outline-primary-cover" href="explanation/Распоряжение Губернатора № 44-П-р.pdf" role="button">Смотреть</a>
+
+
+                    </div>
+                    <p><i class="fa fa-square-o" aria-hidden="true"></i> Распоряжение губернатора Курганской области от 7 августа 2019 года №91-П-р "О внесении изменений в распоряжение Губернатора Курганской области от 12 апреля 2019 года № 44-П-р"
+                        <div class="btn-group" role="group" aria-label="Basic outlined example">
+                            <!--<a class="btn btn-outline-primary" href="explanation/Обоснование потребности.pdf" role="button">Шаблон</a>-->
+                            <a class="btn btn-outline-primary-cover" href="explanation/Распоряжение Губернатора № 91-П-р.pdf" role="button">Смотреть</a>
+                        </div>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <table class="table" id="Поддержка">
+            <h1><i class="fa fa-question-circle" aria-hidden="true"></i></i> Поддержка</h1>
+            <p> 1. Вопросы по закупкам </p>
+            <thead>
+                <tr>
+                    <th scope="col">Специалист <i class="fa fa-user" aria-hidden="true"></i></th>
+                    <th scope="col">Телефон <i class="fa fa-phone" aria-hidden="true"></i></th>
+                    <th scope="col">E-mail <i class="fa fa-envelope-o" aria-hidden="true"></i></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Ярушин Сергей Игоревич</td>
+                    <td>49-85-14</td>
+                    <td>Work45-ru.@mail.ru</td>
+                </tr>
+                <tr>
+                    <td>Братцев Игорь Сергеевич</td>
+                    <td>49-85-83</td>
+                    <td>Omtuzo@yandex.ru</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table class="table">
+            <p> 2. Техническая поддержка</i>
+            </p>
+            <thead>
+                <tr>
+                    <th scope="col">Специалист <i class="fa fa-user" aria-hidden="true"></i></th>
+                    <th scope="col">Телефон <i class="fa fa-phone" aria-hidden="true"></i></th>
+                    <th scope="col">E-mail <i class="fa fa-envelope-o" aria-hidden="true"></i></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Ярушин Сергей Игоревич</td>
+                    <td>49-85-14</td>
+                    <td>Work45-ru.@mail.ru</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row"></div>
+        <div class="col-xl-12">
+            <div class="text-center text-white absolute-bottom" style="background-color: #21081a;">
+                <!-- Grid container -->
+                <div class="container p-4"></div>
+                <!-- Grid container -->
+
+                <!-- Copyright -->
+                <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                    © 2021 Copyright: SAVE AND WATCH
+
+                </div>
+                <!-- Copyright -->
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://use.fontawesome.com/47ff5f8688.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+</body>
+
+</html>
