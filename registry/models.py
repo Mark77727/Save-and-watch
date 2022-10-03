@@ -23,7 +23,7 @@ class Purchase(models.Model):
     hospital = models.ForeignKey(Hospital,
                                  related_name='purchase',
                                  on_delete=models.CASCADE,
-                                 verbose_name='Наименование учреждения')
+                                 verbose_name='Наименование учреждения', blank=True, null=True)
 
     name = models.CharField(max_length=200,
                             db_index=True,

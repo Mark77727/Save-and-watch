@@ -11,7 +11,7 @@ class PurchaseResource(resources.ModelResource):
     hospital = fields.Field(column_name='hospital', attribute='hospital', widget=ForeignKeyWidget(Hospital, 'name'))
 
     class Meta:
-        model = Hospital
+        model = Purchase
 
 
 class HospitalAdmin (ImportExportActionModelAdmin):
@@ -24,6 +24,7 @@ admin.site.register(Hospital, HospitalAdmin)
 
 class PurchaseAdmin(ImportExportActionModelAdmin):
     list_display = ['hospital', 'name', 'price', 'signed', 'returned', 'transferred']
+    resource_class = PurchaseResource
     prepopulated_fields = {'slug': ('name',)}
 
 
