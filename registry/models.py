@@ -8,8 +8,6 @@ class Hospital(models.Model):
                             db_index=True,
                             verbose_name='Наименование учреждения')
 
-    slug = models.SlugField(max_length=150,
-                            unique=True)
     class Meta:
         ordering = ('name',)
         verbose_name = 'Наименование учреждения'
@@ -29,22 +27,19 @@ class Purchase(models.Model):
                             db_index=True,
                             verbose_name='Объект закупки')
 
-    slug = models.SlugField(max_length=200,
-                            db_index=True)
-
     price = models.DecimalField(max_digits=15,
                                 decimal_places=2,
-                                verbose_name='Начальная цена контракта', null=True)
+                                verbose_name='Начальная цена контракта')
 
-    signed = models.DateField(verbose_name='Направлено в Депфин')
+    signed = models.DateField(verbose_name='Направлено в Депфин', blank=True, null=True)
 
-    returned = models.DateField(verbose_name='Получено от Депфина')
+    returned = models.DateField(verbose_name='Получено от Депфина', blank=True, null=True)
 
-    transferred = models.DateField(verbose_name='Направлено в учреждение')
+    transferred = models.DateField(verbose_name='Направлено в учреждение', blank=True, null=True)
 
     class Meta:
         ordering = ('name', 'price')
-        index_together = (('id', 'slug'),)
+        index_together = (('id'),)
         verbose_name = 'Закупки'
         verbose_name_plural = 'Закупки'
 
