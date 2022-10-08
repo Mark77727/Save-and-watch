@@ -24,6 +24,7 @@ admin.site.register(Hospital, HospitalAdmin)
 
 class PurchaseAdmin(ImportExportActionModelAdmin):
     list_display = ['hospital', 'name', 'price', 'signed', 'returned', 'transferred']
+    search_fields = ('name', 'price', 'hospital__name',)
     resource_class = PurchaseResource
 
 admin.site.register(Purchase, PurchaseAdmin)
