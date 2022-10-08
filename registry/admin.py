@@ -12,21 +12,20 @@ class PurchaseResource(resources.ModelResource):
 
     class Meta:
         model = Purchase
+       #fields = [field.name for field in Purchase._meta.fields if field.name != "id"]
+        #exclude = ['id']
 
 
 class HospitalAdmin (ImportExportActionModelAdmin):
-    list_display = ['name', 'slug']
-    prepopulated_fields = {'slug': ('name',)}
-
+    list_display = ['name']
 
 admin.site.register(Hospital, HospitalAdmin)
 
 
 class PurchaseAdmin(ImportExportActionModelAdmin):
     list_display = ['hospital', 'name', 'price', 'signed', 'returned', 'transferred']
+    search_fields = ('name', 'price', 'hospital__name',)
     resource_class = PurchaseResource
-    prepopulated_fields = {'slug': ('name',)}
-
 
 admin.site.register(Purchase, PurchaseAdmin)
 
